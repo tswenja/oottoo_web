@@ -1,0 +1,30 @@
+@media screen and (min-width: 768px) {
+  body {
+    --section-width-px: 1280;
+  }
+
+  .section {
+    margin: 80px 0 60px;
+    padding: 0 80px;
+    margin-top: min(80px, calc((80 / 1440) * 100%));
+    margin-bottom: min(60px, calc((80 / 1440) * 100%));
+    padding: 0 min(80px, calc((80 / 1440) * 100%));
+  }
+
+    .section-title {
+      font-size: 22px;
+    }
+
+  #sec-secondary .sec-video {
+    height: calc((615 / 1440) * 100vw);
+  }
+
+
+  #sec-about .sec-column {
+    width: calc((600 / var(--section-width-px)) * 100%);
+  }
+  #sec-about .bg-img {
+    background-image: url("../assets/img-about-no1.jpg");
+    padding-top: calc((1100 / var(--section-width-px)) * 100%);
+  }
+}
