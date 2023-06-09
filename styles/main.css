@@ -57,7 +57,7 @@ a {
 .icon-fb {
   width: 32px;
   padding-top: 32px;
-  background-image: url("../assets/icon-fb.svg");
+  background-image: url("../assets/icon-fb.svg"), url("../assets/icon-fb-primary.svg");
 }
   .icon-fb:hover {
     background-image: url("../assets/icon-fb-primary.svg");
@@ -65,7 +65,7 @@ a {
 .icon-ig {
   width: 32px;
   padding-top: 32px;
-  background-image: url("../assets/icon-ig.svg");
+  background-image: url("../assets/icon-ig.svg"), url("../assets/icon-ig-primary.svg");
 }
   .icon-ig:hover {
     background-image: url("../assets/icon-ig-primary.svg");
@@ -73,7 +73,7 @@ a {
 .icon-yt {
   width: 32px;
   padding-top: 32px;
-  background-image: url("../assets/icon-yt.svg");
+  background-image: url("../assets/icon-yt.svg"), url("../assets/icon-yt-primary.svg");
 }
   .icon-yt:hover {
     background-image: url("../assets/icon-yt-primary.svg");
