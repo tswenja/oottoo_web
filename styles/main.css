@@ -95,7 +95,7 @@ a {
   --bs-navbar-brand-font-size: 1.25rem;
   --bs-navbar-brand-color: var(--bs-navbar-color);
   --bs-navbar-brand-hover-color: var(--bs-navbar-hover-color);
-  --bs-navbar-nav-link-padding-x: calc((36 / 16) * 1em);
+  --bs-navbar-nav-link-padding-x: calc((36 / 1440) * 100vw);
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
   --bs-navbar-toggler-icon-bg: url("../../assets/icon-nav-collapsed.svg");
@@ -126,6 +126,7 @@ a {
 
     .navbar1 .nav-link {
       text-align: center;
+      white-space: nowrap;
     }
           .navbar1 .nav-link:hover, .navbar1 .nav-link.show {
             color: var(--bs-link-hover-color);
