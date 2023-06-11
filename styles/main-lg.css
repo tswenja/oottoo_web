@@ -3,6 +3,14 @@
     --section-width-px: 1280;
   }
 
+
+  /* NAVBAR */
+  .navbar.navbar1 {
+    margin-top: 44px;
+  }
+
+
+  /* COMPONENTS */
   .section {
     margin: 80px 0 60px;
     padding: 0 80px;
@@ -20,6 +28,11 @@
     font-size: 20px;
   }
 
+
+  /* ANIMATIONS */
+
+
+  /* DOMS LAYOUT */
   #sec-secondary .sec-video {
     height: calc((615 / 1440) * 100vw);
   }
