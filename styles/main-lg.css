@@ -9,11 +9,16 @@
     margin-top: min(80px, calc((80 / 1440) * 100%));
     margin-bottom: min(60px, calc((80 / 1440) * 100%));
     padding: 0 min(80px, calc((80 / 1440) * 100%));
+    font-size: 16px;
   }
 
     .section-title {
       font-size: 22px;
     }
+
+  .sec-subtitle {
+    font-size: 20px;
+  }
 
   #sec-secondary .sec-video {
     height: calc((615 / 1440) * 100vw);
@@ -26,5 +31,16 @@
   #sec-about .bg-img {
     background-image: url("../assets/img-about-no1.jpg");
     padding-top: calc((1100 / var(--section-width-px)) * 100%);
+  }
+  #sec-about .sec-subtitle.no1 {
+    margin-bottom: calc(28px + 2px);
+  }
+      #sec-about .sec-subtitle.no1 > span {
+        padding-top: 45px;
+        padding-left: 48px;
+      }
+  #sec-about .sec-subtitle.no2 {
+    margin-top: 50px;
+    margin-bottom: calc(32px + 14px);
   }
 }
