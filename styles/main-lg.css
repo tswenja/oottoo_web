@@ -6,7 +6,7 @@
 
   /* NAVBAR */
   .navbar.navbar1 {
-    margin-top: 44px;
+    margin-top: calc((44 / 1440) * 100%);
   }
 
 
@@ -43,7 +43,7 @@
   }
   #sec-about .bg-img {
     background-image: url("../assets/img-about-no1.jpg");
-    padding-top: calc((1100 / var(--section-width-px)) * 100%);
+    padding-top: calc((1100 / 600) * 100%);
   }
   #sec-about .sec-subtitle.no1 {
     margin-bottom: calc(28px + 2px);

@@ -2,6 +2,7 @@
 
 /* TAGS */
 body {
+  --bs-body-font-family: 'Noto Sans TC', sans-serif;
   --oottoo-primary-color: #FF7F18;
   --section-width-px: 327;
 
