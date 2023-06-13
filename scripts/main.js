@@ -7,8 +7,9 @@ $('#sec-top > video').on('loadeddata', function(e) {
 });
 $('#sec-top > video').on('suspend', function(e) {
   console.log('suspended');
+  stepingVideo(video, 0.06)
 });
-//$('#sec-top > video')[0].load();
+$('#sec-top > video')[0].load();
 
 function stepingVideo(video, step) {
   video.currentTime += step;
