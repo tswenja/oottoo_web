@@ -15,7 +15,7 @@ function stepingVideo(video, step) {
   video.currentTime += step;
 
   if (video.currentTime >= video.duration) return;
-  setTimeout(stepingVideo.bind(null, video, step), step * 1000);
+  setTimeout(stepingVideo.bind(null, video, step), step * 990);
 }
 
 $('.nav-item.dropdown')
