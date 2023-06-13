@@ -1,6 +1,6 @@
 AOS.init();
 
-$('#sec-top > video').load();
+$('#sec-top > video')[0].load();
 $('#sec-top > video').on('loadeddata', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
