@@ -14,10 +14,6 @@ $('#sec-top > video').on('suspend', function(e) {
   $('.msg').text('suspended');
   stepingVideo(e.target, 0.06)
 });
-$('#sec-top > video').on('pause', function(e) {
-  if (!e.target.loaded) return;
-  $('.msg').text('pause');
-});
 $('#sec-top > video')[0].load();
 
 function stepingVideo(video, step) {
