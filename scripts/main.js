@@ -3,7 +3,7 @@ AOS.init();
 $('#sec-top > video').on('loadeddata', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
-  stepingVideo(e.target, 0.1);
+  stepingVideo(e.target, 0.05);
 });
 $('#sec-top > video')[0].load();
 
