@@ -4,14 +4,23 @@ $('#sec-top > video').on('canplaythrough', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
   e.target.loaded = true;
-  e.target.play();
+  var promise = e.target.play();
+  if (promise !== undefined) {
+    promise.catch(error => {
+      // Auto-play was prevented
+      // Show a UI element to let the user manually start playback
+      stepingVideo(e.target, 0.06)
+    }).then(() => {
+      // Auto-play started
+    });
+  }
 });
-$('#sec-top > video').on('suspend', function(e) {
-  console.log('suspended');
-  if (!e.target.loaded) return;
-  console.log('suspended and loaded');
-  stepingVideo(e.target, 0.06)
-});
+//$('#sec-top > video').on('suspend', function(e) {
+//  console.log('suspended');
+//  if (!e.target.loaded) return;
+//  console.log('suspended and loaded');
+//  stepingVideo(e.target, 0.06)
+//});
 $('#sec-top > video')[0].load();
 
 function stepingVideo(video, step) {
