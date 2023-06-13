@@ -3,12 +3,14 @@ AOS.init();
 $('#sec-top > video').on('canplaythrough', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
+  $('.msg').text('loaded');
   e.target.loaded = true;
   e.target.play();
 });
 $('#sec-top > video').on('suspend', function(e) {
   if (!e.target.loaded) return;
   console.log('suspended');
+  $('.msg').text('suspended');
   stepingVideo(e.target, 0.06)
 });
 $('#sec-top > video')[0].load();
