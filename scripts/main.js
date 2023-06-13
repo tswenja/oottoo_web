@@ -5,11 +5,12 @@ $('#sec-top > video').on('canplaythrough', function(e) {
   console.log('loaded');
   $('.msg').text('loaded');
   e.target.loaded = true;
-  e.target.play();
+  console.log(e.target.play());
 });
 $('#sec-top > video').on('suspend', function(e) {
-  if (!e.target.loaded) return;
   console.log('suspended');
+  if (!e.target.loaded) return;
+  console.log('suspended and loaded');
   $('.msg').text('suspended');
   stepingVideo(e.target, 0.06)
 });
