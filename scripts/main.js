@@ -2,7 +2,7 @@ AOS.init();
 
 $('#sec-top > video').on('loadeddata', function(e) {
   $('.enter-animation').addClass('show');
-  e.target.controls = false;
+  console.log('loaded');
 });
 
 $('.nav-item.dropdown')
