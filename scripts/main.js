@@ -3,7 +3,7 @@ AOS.init();
 $('#sec-top > video').on('loadeddata', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
-  e.target.play();
+  //e.target.play();
 });
 $('#sec-top > video')[0].load();
 
