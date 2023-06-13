@@ -4,10 +4,7 @@ $('#sec-top > video').on('canplaythrough', function(e) {
   $('.enter-animation').addClass('show');
   console.log('loaded');
   e.target.loaded = true;
-  result = e.target.play();
-  result.then && result.then((a, b, c)  => {
-    console.log('play', a, b, c);
-  });
+  e.target.play();
 });
 $('#sec-top > video').on('suspend', function(e) {
   console.log('suspended');
