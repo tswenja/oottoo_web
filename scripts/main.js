@@ -5,7 +5,7 @@ $('#sec-top > video').on('loadeddata', function(e) {
   console.log('loaded');
   //e.target.play();
 });
-$('#sec-top > video')[0].load();
+//$('#sec-top > video')[0].load();
 
 function stepingVideo(video, step) {
   video.currentTime += step;
