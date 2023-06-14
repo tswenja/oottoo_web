@@ -6,6 +6,7 @@
 
   /* NAVBAR */
   .navbar.navbar1 {
+    --bs-navbar-nav-link-padding-x: calc((24 / 1280) * 100vw);
     margin-top: calc((44 / 1440) * 100%);
   }
 
@@ -109,4 +110,11 @@
       margin-top: 120px;
       margin-bottom: 60px;
     }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .navbar.navbar1 {
+    --bs-navbar-nav-link-padding-x: calc((36 / 1440) * 100vw);
+  }
 }
