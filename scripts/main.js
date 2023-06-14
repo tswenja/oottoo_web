@@ -18,10 +18,11 @@ $('#sec-top > video')[0].load();
 
 function rollingVideo(video) {
   var step = 0.4;
-  video.currentTime += step;
 
-  if (video.currentTime >= video.duration) return;
-  setTimeout(rollingVideo.bind(null, video), step * 1000 - 3);
+  if ((video.currentTime + 0.4) <= video.duration)
+    setTimeout(rollingVideo.bind(null, video), step * 1000 - 3);
+
+  video.currentTime += step;
 }
 
 $('.nav-item.dropdown')
