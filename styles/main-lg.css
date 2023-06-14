@@ -39,6 +39,10 @@
 
 
   /* DOMS LAYOUT */
+  #sec-top .copyright {
+    font-size: min(14px, calc((14 / 1440) * 100vw));
+  }
+
 
   #sec-secondary .sec-video {
     height: calc((615 / 1440) * 100vw);

@@ -17,9 +17,9 @@ $('#sec-top > video').on('canplaythrough', function(e) {
 $('#sec-top > video')[0].load();
 
 function rollingVideo(video) {
-  var step = 0.4;
+  var step = 0.04;
 
-  if ((video.currentTime + 0.4) <= video.duration)
+  if ((video.currentTime + step) <= video.duration)
     setTimeout(rollingVideo.bind(null, video), step * 1000 - 3);
 
   video.currentTime += step;
