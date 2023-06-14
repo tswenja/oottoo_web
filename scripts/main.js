@@ -1,7 +1,6 @@
 AOS.init();
 
 $('video[data-autoplay]').on('loadeddata', function(e) {
-  return rollingVideo(e.target);
   var promise = e.target.play();
   if (promise !== undefined) {
     promise.catch(error => {
@@ -19,7 +18,7 @@ $('#sec-top > video')[0].load();
 
 var timeStart;
 function rollingVideo(video) {
-  var step = 100;
+  var step = 40;
 
   if ((video.currentTime + step / 1000) <= video.duration)
     setTimeout(rollingVideo.bind(null, video), step - 3);
