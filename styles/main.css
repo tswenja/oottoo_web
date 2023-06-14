@@ -247,7 +247,7 @@ a {
     margin-bottom: 20px;
 
     text-shadow: 0px 0px 20px #000000;
-    font-size: min(14px, calc((14 / 1440) * 100vw));
+    font-size: max(12px, calc((12 / 375) * 100vw));
     color: #fff;
     font-weight: 500;
 
