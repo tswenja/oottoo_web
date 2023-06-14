@@ -5,7 +5,7 @@ $('video[data-autoplay]').on('canplaythrough', function(e) {
   if (promise !== undefined) {
     promise.catch(error => {
       // Auto-play was prevented
-      stepingVideo(e.target, 0.06)
+      rollingVideo(e.target);
     }).then(() => {
       // Auto-play started
     });
@@ -16,11 +16,12 @@ $('#sec-top > video').on('canplaythrough', function(e) {
 });
 $('#sec-top > video')[0].load();
 
-function stepingVideo(video, step) {
+function rollingVideo(video) {
+  var step = 0.4;
   video.currentTime += step;
 
   if (video.currentTime >= video.duration) return;
-  setTimeout(stepingVideo.bind(null, video, step), step * 990);
+  setTimeout(rollingVideo.bind(null, video), step * 1000 - 3);
 }
 
 $('.nav-item.dropdown')
