@@ -414,6 +414,9 @@ a {
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 1px; }
+    .navbar1 .navbar-toggler[aria-expanded=true] {
+      position: fixed;
+      right: 0; }
     .navbar1 .collapse.show, .navbar1 .collapsing {
       position: fixed;
       z-index: 1;

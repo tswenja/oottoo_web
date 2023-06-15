@@ -98,6 +98,10 @@
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 1px;
     }
+    .navbar-toggler[aria-expanded=true] {
+      position: fixed;
+      right: 0;
+    }
 
     .collapse.show, .collapsing {
       position: fixed;
