@@ -96,6 +96,7 @@
       z-index: 9;
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
+      margin-top: 1px;
     }
 
     .collapse.show, .collapsing {
@@ -165,7 +166,7 @@
 }
 
 
-/* toggler */
+/* toggler bars */
 .navbar-toggler span.box {
     display: block;
     position: relative;
@@ -207,7 +208,6 @@
 .navbar-toggler[aria-expanded=true] span.box span.bar.top {
     -webkit-transform: translate(0px, 9px) rotate(45deg);
             transform: translate(0px, 9px) rotate(45deg);
-    top: 0;
 }
 
 
