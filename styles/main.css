@@ -68,14 +68,17 @@ a {
   transform: translateY(-100%);
   opacity: 0;
   transition: transform 0.6s, opacity 0.2s;
-  transition-timing-function: ease-out, linear;
-  transition-delay: 8.1s, 8.1s; }
+  transition-timing-function: ease-out, linear; }
 
 .enter-animation.up {
   transform: translateY(100%); }
 
 .enter-animation.show {
   transform: translateY(0%);
+  opacity: 1; }
+
+.enter-animation.showed {
+  transform: none;
   opacity: 1; }
 
 /* COMPONENTS */
@@ -418,9 +421,6 @@ a {
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 1px; }
-    .navbar1 .navbar-toggler[aria-expanded=true] {
-      position: fixed;
-      right: 0; }
     .navbar1 .collapse.show, .navbar1 .collapsing {
       position: fixed;
       z-index: 1;
@@ -428,7 +428,7 @@ a {
       right: 0;
       width: 100vw;
       max-width: 375px;
-      height: 100vh;
+      height: 100%;
       overflow: auto;
       background-color: #000000;
       padding-top: 112px;

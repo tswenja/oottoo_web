@@ -98,10 +98,6 @@
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 1px;
     }
-    .navbar-toggler[aria-expanded=true] {
-      position: fixed;
-      right: 0;
-    }
 
     .collapse.show, .collapsing {
       position: fixed;
@@ -110,7 +106,7 @@
       right: 0;
       width: 100vw;
       max-width: 375px;
-      height: 100vh;
+      height: 100%;
       overflow: auto;
 
       background-color: #000000;

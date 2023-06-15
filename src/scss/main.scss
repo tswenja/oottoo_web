@@ -91,13 +91,16 @@ a {
   opacity: 0;
   transition: transform 0.6s, opacity 0.2s;
   transition-timing-function: ease-out, linear;
-  transition-delay: 8.1s, 8.1s;
 }
   .enter-animation.up {
     transform: translateY(100%);
   }
   .enter-animation.show {
     transform: translateY(0%);
+    opacity: 1;
+  }
+  .enter-animation.showed {
+    transform: none;
     opacity: 1;
   }
 
