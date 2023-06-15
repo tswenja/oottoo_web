@@ -76,6 +76,13 @@
             padding-right: 1em;
           }
 
+  .navbar1 .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0;
+  }
+
 @media screen and (max-width: $breakpoint-xl) {
   .navbar1 {
     height: 80px;
@@ -93,25 +100,42 @@
 
     .collapse.show, .collapsing {
       position: fixed;
+      z-index: 1;
       top: 0;
       right: 0;
       width: 100vw;
+      max-width: 375px;
       height: 100vh;
       overflow: auto;
 
       background-color: #000000;
       padding-top: 112px;
       padding-bottom: 88px;
+
+      & + .backdrop {
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000;
+      }
     }
 
     .collapse.show, .collapsing {
       transition: transform .35s ease;
+      & + .backdrop {
+        transition: opacity 0.35s;
+      }
     }
     .collapse.show {
       transform: translate(0, 0);
     }
     .collapsing {
       transform: translate(100%, 0);
+    }
+    .collapse.show + .backdrop {
+      opacity: 0.5;
+    }
+    .collapsing + .backdrop {
+      opacity: 0;
     }
 
     .socialmedia {

@@ -397,6 +397,12 @@ a {
   padding-left: 1em;
   padding-right: 1em; }
 
+.navbar1 .backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0; }
+
 @media screen and (max-width: 1200px) {
   .navbar1 {
     height: 80px; }
@@ -409,20 +415,32 @@ a {
       margin-right: calc((12 / 375) * 100vw); }
     .navbar1 .collapse.show, .navbar1 .collapsing {
       position: fixed;
+      z-index: 1;
       top: 0;
       right: 0;
       width: 100vw;
+      max-width: 375px;
       height: 100vh;
       overflow: auto;
       background-color: #000000;
       padding-top: 112px;
       padding-bottom: 88px; }
+      .navbar1 .collapse.show + .backdrop, .navbar1 .collapsing + .backdrop {
+        width: 100vw;
+        height: 100vh;
+        background-color: #000000; }
     .navbar1 .collapse.show, .navbar1 .collapsing {
       transition: transform .35s ease; }
+      .navbar1 .collapse.show + .backdrop, .navbar1 .collapsing + .backdrop {
+        transition: opacity 0.35s; }
     .navbar1 .collapse.show {
       transform: translate(0, 0); }
     .navbar1 .collapsing {
       transform: translate(100%, 0); }
+    .navbar1 .collapse.show + .backdrop {
+      opacity: 0.5; }
+    .navbar1 .collapsing + .backdrop {
+      opacity: 0; }
     .navbar1 .socialmedia {
       margin-top: 60px; }
     .navbar1 .dropdown-menu {
