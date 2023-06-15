@@ -96,7 +96,7 @@
       z-index: 9;
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
-      margin-top: 1px;
+      margin-top: 2px;
     }
 
     .collapse.show, .collapsing {
@@ -206,6 +206,7 @@
 }
 
 .navbar-toggler[aria-expanded=true] span.box span.bar.top {
+    width: 26px;
     -webkit-transform: translate(0px, 9px) rotate(45deg);
             transform: translate(0px, 9px) rotate(45deg);
 }
@@ -216,6 +217,7 @@
 }
 
 .navbar-toggler[aria-expanded=true] span.box span.bar.bottom {
+    width: 26px;
     -webkit-transform: translate(0px, -9px) rotate(-45deg);
             transform: translate(0px, -9px) rotate(-45deg);
 }
