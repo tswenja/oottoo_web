@@ -12,7 +12,7 @@ body {
   --bs-link-color: #ffffff;
   --bs-link-hover-color: #FF7F18;
   --bs-primary-rgb: 255, 127, 24;
-  background: #161616 url("../assets/pattern1@2x.jpg") center/100% auto; }
+  background: #161616 url("../assets/pattern1@2x.jpg") center/max(1100px, 100%) auto; }
 
 body > header {
   position: absolute;
@@ -91,11 +91,11 @@ a {
   width: 100%; }
 
 .section {
-  max-width: 1440px;
-  margin: 0 auto;
-  margin: 24px 0 36px;
+  max-width: 600px;
+  margin: 24px auto 36px;
   padding: 0 24px;
   font-size: calc((13 / 375) * 100vw);
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.8; }
 
@@ -114,6 +114,7 @@ a {
 
 .sec-subtitle {
   font-size: calc((14 / 375) * 100vw);
+  font-size: 14px;
   font-weight: 500;
   line-height: 1.48; }
 
@@ -137,6 +138,7 @@ a {
   margin-bottom: 20px;
   text-shadow: 0px 0px 20px #000000;
   font-size: max(12px, calc((12 / 375) * 100vw));
+  font-size: 12px;
   color: #fff;
   font-weight: 500;
   position: absolute;
@@ -145,9 +147,10 @@ a {
 
 #sec-secondary .sec-video {
   width: 100%;
-  height: calc((327 / 375) * 100vw);
+  height: calc((156 / 375) * 100vw);
   max-width: 1280px;
-  max-height: 615px; }
+  max-height: 615px;
+  display: block; }
 
 /* #sec-abount */
 #sec-about .bg-img {
@@ -156,6 +159,9 @@ a {
 
 #sec-about .sec-subtitle.no1 {
   margin-bottom: 40px; }
+
+#sec-about .sec-subtitle.no1 > img {
+  width: 100px; }
 
 #sec-about .sec-subtitle.no1 > span {
   padding-top: 11px;
@@ -166,7 +172,11 @@ a {
   line-height: 1.795; }
 
 #sec-about .sec-subtitle.no2 {
+  margin-top: 24px;
   margin-bottom: 24px; }
+
+#sec-about .sec-content.no2 {
+  line-height: 1.795; }
 
 /* #sec-contact */
 #sec-contact .bg-img {
@@ -213,18 +223,17 @@ a {
 #sec-footer .img-wrap > img {
   width: 160px; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
   body {
-    --section-width-px: 1280; }
+    --section-width-px: 1280;
+    background-size: 100%; }
 
   /* ANIMATIONS */
   /* COMPONENTS */
   .section {
-    margin: 80px 0 60px;
+    max-width: 1440px;
+    margin: 80px auto 60px;
     padding: 0 80px;
-    margin-top: min(80px, calc((80 / 1440) * 100%));
-    margin-bottom: min(60px, calc((80 / 1440) * 100%));
-    padding: 0 min(80px, calc((80 / 1440) * 100%));
     font-size: 16px; }
 
   .section-title {
@@ -235,7 +244,8 @@ a {
     font-size: 20px; }
 
   .sec-column {
-    width: calc((600 / var(--section-width-px)) * 100%); }
+    width: calc((600 / var(--section-width-px)) * 100%);
+    width: min(600px, calc((534 / 1120) * 100%)); }
 
   /* DOMS LAYOUT */
   #sec-top .copyright {
@@ -244,31 +254,49 @@ a {
   #sec-secondary .sec-video {
     height: calc((615 / 1440) * 100vw); }
 
-  /* #sec-abount */
+  /* #sec-about */
   #sec-about .bg-img {
     background-image: url("../assets/img-about-no1.jpg");
     padding-top: calc((1100 / 600) * 100%); }
 
-  #sec-about .sec-subtitle.no1 {
-    margin-bottom: calc(28px + 2px); }
-
-  #sec-about .sec-subtitle.no1 > span {
-    padding-top: 45px;
-    padding-left: 48px; }
-
   #sec-about .sec-column.no2 {
     margin-top: 0px; }
 
+  #sec-about .sec-subtitle.no1 {
+    margin-bottom: calc(28px + 2px); }
+
+  #sec-about .sec-subtitle.no1 > img {
+    width: calc((160 / 560) * 100%);
+    max-width: 160px; }
+
+  #sec-about .sec-subtitle.no1 > span {
+    padding-top: min(45px, calc((45 / 534) * 100%));
+    padding-left: min(48px, calc((48 / 534) * 100%));
+    font-size: min(20px, calc((19 / 1280) * 100vw)); }
+
+  #sec-about .sec-content {
+    /* use xxl proportion instead
+      font-size: min(16px, calc((14 / 1280) * 100vw));
+      line-height: min(28.8px, calc((25.2 / 1280) * 100vw) );
+    */
+    font-size: min(16px, calc((16 / 1440) * 100vw));
+    line-height: min(28.8px, calc((28.8 / 1440) * 100vw)); }
+
   #sec-about .sec-subtitle.no2 {
-    margin-top: 50px;
-    margin-bottom: calc(32px + 14px); }
+    margin-top: min(44px, calc((44 / 534) * 100%));
+    margin-bottom: min(28px, calc((28 / 534) * 100%));
+    font-size: min(20px, calc((19 / 1280) * 100vw));
+    line-height: min(29.6px, calc((32.4 / 1440) * 100vw));
+    /* additional spacing for xxl */
+    padding-top: min(10px, calc((100vw - 1280px) / (1440 - 1280) * 10));
+    padding-bottom: min(10px, calc((100vw - 1280px) / (1440 - 1280) * 10)); }
 
   /* #sec-contact */
   #sec-contact .sec-subtitle {
     line-height: 1.795; }
 
   #sec-contact .sec-subtitle.no1 {
-    margin-top: 51px; }
+    margin-top: 0; }
 
   #sec-contact .sec-content {
     font-size: 24px;
@@ -276,7 +304,7 @@ a {
 
   #sec-contact .sec-content,
   #sec-contact .sec-subtitle.no2 {
-    margin-top: 60px; }
+    margin-top: 0; }
 
   #sec-contact .icon-fb,
   #sec-contact .icon-ig,

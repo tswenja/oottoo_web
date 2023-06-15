@@ -1,6 +1,7 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $breakpoint-lg) {
   body {
     --section-width-px: 1280;
+    background-size: 100%;
   }
 
 
@@ -9,11 +10,9 @@
 
   /* COMPONENTS */
   .section {
-    margin: 80px 0 60px;
+    max-width: 1440px;
+    margin: 80px auto 60px;
     padding: 0 80px;
-    margin-top: min(80px, calc((80 / 1440) * 100%));
-    margin-bottom: min(60px, calc((80 / 1440) * 100%));
-    padding: 0 min(80px, calc((80 / 1440) * 100%));
     font-size: 16px;
   }
 
@@ -28,6 +27,7 @@
 
     .sec-column {
       width: calc((600 / var(--section-width-px)) * 100%);
+      width: min(600px, calc((534 / 1120) * 100%));
     }
 
 
@@ -42,68 +42,87 @@
   }
 
 
-  /* #sec-abount */
-    #sec-about .bg-img {
-      background-image: url("../assets/img-about-no1.jpg");
-      padding-top: calc((1100 / 600) * 100%);
-    }
-    #sec-about .sec-subtitle.no1 {
-      margin-bottom: calc(28px + 2px);
-    }
-        #sec-about .sec-subtitle.no1 > span {
-          padding-top: 45px;
-          padding-left: 48px;
-        }
-    #sec-about .sec-column.no2 {
-      margin-top: 0px;
-    }
-    #sec-about .sec-subtitle.no2 {
-      margin-top: 50px;
-      margin-bottom: calc(32px + 14px);
-    }
+  /* #sec-about */
+  #sec-about .bg-img {
+    background-image: url("../assets/img-about-no1.jpg");
+    padding-top: calc((1100 / 600) * 100%);
+  }
+  #sec-about .sec-column.no2 {
+    margin-top: 0px;
+  }
+  #sec-about .sec-subtitle.no1 {
+    margin-bottom: calc(28px + 2px);
+  }
+      #sec-about .sec-subtitle.no1 > img {
+        width: calc((160 / 560) * 100%);
+        max-width: 160px;
+      }
+      #sec-about .sec-subtitle.no1 > span {
+        padding-top: min( 45px, calc((45 / 534) * 100%) );
+        padding-left: min( 48px, calc((48 / 534) * 100%) );
+        font-size:  min(20px, calc((19 / 1280) * 100vw));
+      }
+  #sec-about .sec-content {
+    /* use xxl proportion instead
+      font-size: min(16px, calc((14 / 1280) * 100vw));
+      line-height: min(28.8px, calc((25.2 / 1280) * 100vw) );
+    */
+    font-size: min(16px, calc((16 / 1440) * 100vw));
+    line-height: min(28.8px, calc((28.8 / 1440) * 100vw) );
+  }
+  #sec-about .sec-subtitle.no2 {
+    margin-top: min( 44px, calc((44 / 534) * 100%) );
+    margin-bottom: min( 28px, calc((28 / 534) * 100%) );
+    font-size:  min(20px, calc((19 / 1280) * 100vw));
+    line-height: min(29.6px, calc((32.4 / 1440) * 100vw) );
+
+    /* additional spacing for xxl */
+    padding-top: min( 10px, calc((100vw - 1280px) / (1440 - 1280) * 10) );
+    padding-bottom: min( 10px, calc((100vw - 1280px) / (1440 - 1280) * 10) );
+  }
 
 
   /* #sec-contact */
-    #sec-contact .sec-subtitle {
-      line-height: 1.795;
-    }
-    #sec-contact .sec-subtitle.no1 {
-      margin-top: 51px;
-    }
+  #sec-contact .sec-subtitle {
+    line-height: 1.795;
+  }
+  #sec-contact .sec-subtitle.no1 {
+    margin-top: 0;
+  }
 
-    #sec-contact .sec-content {
-      font-size: 24px;
-      font-weight: 700;
-    }
+  #sec-contact .sec-content {
+    font-size: 24px;
+    font-weight: 700;
+  }
 
-    #sec-contact .sec-content,
-    #sec-contact .sec-subtitle.no2 {
-      margin-top: 60px;
-    }
+  #sec-contact .sec-content,
+  #sec-contact .sec-subtitle.no2 {
+    margin-top: 0;
+  }
 
 
-    #sec-contact .icon-fb,
-    #sec-contact .icon-ig,
-    #sec-contact .icon-yt {
-      width: 54px;
-      padding-top: 54px;
-    }
+  #sec-contact .icon-fb,
+  #sec-contact .icon-ig,
+  #sec-contact .icon-yt {
+    width: 54px;
+    padding-top: 54px;
+  }
 
 
   /* #sec-footer */
-    #sec-footer {
-      margin-top: 120px;
-      margin-bottom: 60px;
+  #sec-footer {
+    margin-top: 120px;
+    margin-bottom: 60px;
+  }
+    #sec-footer .copyright {
+      font-size: 16px;
+      font-weight: 700;
     }
-      #sec-footer .copyright {
-        font-size: 16px;
-        font-weight: 700;
-      }
-      #sec-footer hr {
-        width: auto;
-        margin: 1rem 40px;
-      }
-      #sec-footer .img-wrap {
-        width: 168px;
-      }
+    #sec-footer hr {
+      width: auto;
+      margin: 1rem 40px;
+    }
+    #sec-footer .img-wrap {
+      width: 168px;
+    }
 }

@@ -22,7 +22,7 @@ body {
   --bs-link-hover-color: #FF7F18;
   --bs-primary-rgb: 255, 127, 24;
 
-  background: #161616 url("../assets/pattern1@2x.jpg") center / 100% auto;
+  background: #161616 url("../assets/pattern1@2x.jpg") center / max(1100px, 100%) auto;
 }
 
   body > header {
@@ -123,11 +123,11 @@ a {
 
 
 .section {
-  max-width: 1440px;
-  margin: 0 auto;
-  margin: 24px 0 36px;
+  max-width: 600px;
+  margin: 24px auto 36px;
   padding: 0 24px;
   font-size: calc((13 / 375) * 100vw);
+  font-size: 13px;
   font-weight: 500;
   line-height: 1.8;
 }
@@ -148,10 +148,10 @@ a {
 
   .sec-subtitle {
     font-size: calc((14 / 375) * 100vw);
+    font-size: 14px;
     font-weight: 500;
     line-height: 1.48;
   }
-
 
 
 
@@ -179,6 +179,7 @@ a {
 
     text-shadow: 0px 0px 20px #000000;
     font-size: max(12px, calc((12 / 375) * 100vw));
+    font-size: 12px;
     color: #fff;
     font-weight: 500;
 
@@ -190,9 +191,10 @@ a {
 
 #sec-secondary .sec-video {
   width: 100%;
-  height: calc((327 / 375) * 100vw);
+  height: calc((156 / 375) * 100vw);
   max-width: 1280px;
   max-height: 615px;
+  display: block;
 }
 
 
@@ -204,6 +206,9 @@ a {
   #sec-about .sec-subtitle.no1 {
     margin-bottom: 40px;
   }
+      #sec-about .sec-subtitle.no1 > img {
+        width: 100px;
+      }
       #sec-about .sec-subtitle.no1 > span {
         padding-top: 11px;
         padding-left: 24px;
@@ -213,7 +218,11 @@ a {
     line-height: 1.795;
   }
   #sec-about .sec-subtitle.no2 {
+    margin-top: 24px;
     margin-bottom: 24px;
+  }
+  #sec-about .sec-content.no2 {
+    line-height: 1.795;
   }
 
 
