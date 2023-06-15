@@ -456,7 +456,7 @@ a {
 /* toggler */
 .navbar-toggler span.box {
   display: block;
-  position: absolute;
+  position: relative;
   width: 20px;
   height: 21px;
   margin: auto;
@@ -488,16 +488,15 @@ a {
   bottom: 0px; }
 
 .navbar-toggler[aria-expanded=true] span.box span.bar.top {
-  -webkit-transform: rotate(45deg) translate(5px, 6px);
-  transform: rotate(45deg) translate(5px, 6px);
+  -webkit-transform: translate(0px, 9px) rotate(45deg);
+  transform: translate(0px, 9px) rotate(45deg);
   top: 0; }
 
 .navbar-toggler[aria-expanded=true] span.box span.bar.middle {
   opacity: 0; }
 
 .navbar-toggler[aria-expanded=true] span.box span.bar.bottom {
-  -webkit-transform: rotate(-45deg) translate(5px, -6px);
-  transform: rotate(-45deg) translate(5px, -6px);
-  bottom: 2px; }
+  -webkit-transform: translate(0px, -9px) rotate(-45deg);
+  transform: translate(0px, -9px) rotate(-45deg); }
 
 /*# sourceMappingURL=main.css.map */
