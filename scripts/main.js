@@ -23,8 +23,9 @@ $('video[data-autoplay]').on('loadeddata', function(e) {
     });
   }
 });
-$('#sec-top > video').on('canplaythrough', function(e) {
-  $('.enter-animation').addClass('show');
+$('#sec-top > video').on('loadeddata', function(e) {
+  setTimeout(()=>$('.enter-animation').addClass('show'), 8100);
+  setTimeout(()=>$('.enter-animation').addClass('showed'), 9000);
 });
 $('#sec-top > video')[0].load();
 
