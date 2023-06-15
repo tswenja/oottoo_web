@@ -44,10 +44,10 @@ $('#navbarMenu .nav-item.dropdown')
 // navbarMenu, mobile: disable body scroll when menu showed
 $('#navbarMenu')
   .on('shown.bs.collapse', function() {
-    setTimeout(function() { $('body, .page-volumn').addClass('disable-scroll') }, 350);
+    setTimeout(function() { $('body').addClass('disable-scroll') }, 350);
   })
   .on('hidden.bs.collapse', function() {
-    $('body, .page-volumn').removeClass('disable-scroll');
+    $('body').removeClass('disable-scroll');
   });
 
 

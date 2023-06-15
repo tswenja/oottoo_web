@@ -6,12 +6,9 @@ $breakpoint-lg: 992px;
 $breakpoint-md: 768px;
 $breakpoint-sm: 576px;
 
-.disable-scroll {
-  height: 100vh;
-  overflow: hidden;
-}
 
 /* TAGS */
+html { height: 100%; }
 body {
   --oottoo-primary-color: #FF7F18;
   --section-width-px: 327;
@@ -24,6 +21,11 @@ body {
 
   background: #161616 url("../assets/pattern1@2x.jpg") center / max(1100px, 100%) auto;
 }
+  body.disable-scroll,
+  body.disable-scroll, .body-volume {
+    height: 100%;
+    overflow: hidden;
+  }
 
   body > header {
     position: absolute;
