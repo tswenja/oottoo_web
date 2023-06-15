@@ -38,7 +38,7 @@ $('#navbarMenu .nav-item.dropdown')
   }).on('mouseleave', function(e) {
     if ($('#navbarMenu').hasClass('show')) return;
 
-    $(this).find('[data-bs-toggle="dropdown"]').dropdown('hide');
+    $(this).find('[data-bs-toggle="dropdown"]').dropdown('hide').blur();
   });
 
 // navbarMenu, mobile: disable body scroll when menu showed
@@ -49,3 +49,14 @@ $('#navbarMenu')
   .on('hidden.bs.collapse', function() {
     $('body').removeClass('disable-scroll');
   });
+
+
+// Add slideDown animation to Bootstrap dropdown when expanding.
+$('.dropdown').on('show.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+});
+
+// Add slideUp animation to Bootstrap dropdown when collapsing.
+$('.dropdown').on('hide.bs.dropdown', function() {
+  $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+});
