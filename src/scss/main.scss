@@ -21,11 +21,6 @@ body {
 
   background: #161616 url("../assets/pattern1@2x.jpg") center / max(1100px, 100%) auto;
 }
-  body.disable-scroll,
-  body.disable-scroll, .body-volume {
-    height: 100%;
-    overflow: hidden;
-  }
 
   header {
     position: absolute;
@@ -42,6 +37,12 @@ a, button, input, select {
 
 a {
   text-decoration: none;
+}
+
+
+.sec-anchor {
+  position: absolute;
+  margin-top: -24px;
 }
 
 

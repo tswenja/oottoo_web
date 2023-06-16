@@ -13,11 +13,6 @@ body {
   --bs-primary-rgb: 255, 127, 24;
   background: #161616 url("../assets/pattern1@2x.jpg") center/max(1100px, 100%) auto; }
 
-body.disable-scroll,
-body.disable-scroll, .body-volume {
-  height: 100%;
-  overflow: hidden; }
-
 header {
   position: absolute;
   width: 100%;
@@ -28,6 +23,10 @@ a, button, input, select {
 
 a {
   text-decoration: none; }
+
+.sec-anchor {
+  position: absolute;
+  margin-top: -24px; }
 
 /* ICONS */
 .bg-img, .icon {
@@ -235,6 +234,10 @@ a {
     --section-width-px: 1280;
     background-size: 100%; }
 
+  .sec-anchor {
+    position: absolute;
+    margin-top: -60px; }
+
   /* ANIMATIONS */
   /* COMPONENTS */
   .section {
@@ -411,6 +414,11 @@ a {
   opacity: 0; }
 
 @media screen and (max-width: 1200px) {
+  body.disable-scroll-by-navbar,
+  body.disable-scroll-by-navbar, .body-volume {
+    height: 100%;
+    overflow: hidden; }
+
   .navbar1 {
     height: 80px; }
     .navbar1 .navbar-brand {
@@ -421,6 +429,14 @@ a {
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 2px; }
+    .navbar1 .nav-item {
+      position: relative; }
+      .navbar1 .nav-item .navbar-toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
     .navbar1 .collapse.show, .navbar1 .collapsing {
       position: fixed;
       z-index: 1;

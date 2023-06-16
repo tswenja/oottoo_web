@@ -84,6 +84,12 @@
   }
 
 @media screen and (max-width: $breakpoint-xl) {
+  body.disable-scroll-by-navbar,
+  body.disable-scroll-by-navbar, .body-volume {
+    height: 100%;
+    overflow: hidden;
+  }
+
   .navbar1 {
     height: 80px;
 
@@ -97,6 +103,18 @@
       margin-left: 12px;
       margin-right: calc((12 / 375) * 100vw);
       margin-top: 2px;
+    }
+
+    .nav-item {
+      position: relative;
+
+      .navbar-toggler {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
     }
 
     .collapse.show, .collapsing {
