@@ -11,7 +11,7 @@ body {
   --bs-link-color: #ffffff;
   --bs-link-hover-color: #FF7F18;
   --bs-primary-rgb: 255, 127, 24;
-  background: #161616 url("../assets/pattern1@2x.jpg") center/max(1100px, 100%) auto; }
+  background: #000000 url("../assets/pattern1@2x.jpg") center/max(1100px, 100%) auto; }
 
 header {
   position: absolute;
